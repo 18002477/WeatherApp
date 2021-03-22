@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         ListView forecastListView = findViewById(R.id.lvForecast);
 
-        String[] forecastStringArray = new String[5];
+        /*String[] forecastStringArray = new String[5];
 
         for (int i=0; i<forecasts.size();i++){
             forecastStringArray[i] = forecasts.get(i).toString();
@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayAdapter<String> forecastArrayAdapter =
                 new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,forecastStringArray);
-        forecastListView.setAdapter(forecastArrayAdapter);
+        forecastListView.setAdapter(forecastArrayAdapter);*/
 
+        ForecastAdapter forecastAdapter = new ForecastAdapter(this,0,forecasts);
+        forecastListView.setAdapter(forecastAdapter);
     }
 }
